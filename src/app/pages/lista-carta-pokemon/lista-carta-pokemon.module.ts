@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListaCartaPokemonComponent } from './lista-carta-pokemon.component';
+import { ListaCartaPokemonRoutingModule } from "./lista-carta-pokemon-routing.module";
 
 
 
@@ -9,7 +10,8 @@ import { ListaCartaPokemonComponent } from './lista-carta-pokemon.component';
     ListaCartaPokemonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ListaCartaPokemonRoutingModule
   ]
 })
 export class ListaCartaPokemonModule { }
