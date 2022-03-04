@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CartaPokemonService} from "../../services/carta-pokemon.service";
 
 @Component({
   selector: 'app-lista-carta-pokemon',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaCartaPokemonComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private cartaPokemonService: CartaPokemonService
+  ) { }
 
   ngOnInit(): void {
+    this.cartaPokemonService.getCards().subscribe( res => {
+      console.log(res)
+    })
   }
 
 }

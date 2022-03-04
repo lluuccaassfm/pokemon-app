@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_key: 'e3b47b03-78e8-465b-8fc0-69afdf618d30',
+  url_base: 'https://api.pokemontcg.io/v2/'
 };
 
 /*
