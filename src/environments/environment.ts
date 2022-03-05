@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api_key: 'e3b47b03-78e8-465b-8fc0-69afdf618d30',
-  url_base: 'https://api.pokemontcg.io/v2/'
+  url_base: 'https://api.pokemontcg.io/v2'
 };
 
 /*

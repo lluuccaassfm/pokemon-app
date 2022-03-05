@@ -1,0 +1,12 @@
+<div>Some tags before</div>
+<owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let carta of cartas">
+    <ng-template carouselSlide>
+      {{ carta?.name }}
+      <img [src]="carta.images.small" alt="imagem principal da carta">
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>
+<div>Some tags after</div>

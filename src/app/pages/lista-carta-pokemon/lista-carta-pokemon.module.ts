@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListaCartaPokemonComponent } from './lista-carta-pokemon.component';
 import { ListaCartaPokemonRoutingModule } from "./lista-carta-pokemon-routing.module";
+import { CarouselHolderModule } from "../../shared/components/carousel-holder/carousel-holder.module";
 
 
 
@@ -9,9 +10,10 @@ import { ListaCartaPokemonRoutingModule } from "./lista-carta-pokemon-routing.mo
   declarations: [
     ListaCartaPokemonComponent
   ],
-  imports: [
-    CommonModule,
-    ListaCartaPokemonRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        ListaCartaPokemonRoutingModule,
+        CarouselHolderModule
+    ]
 })
 export class ListaCartaPokemonModule { }
