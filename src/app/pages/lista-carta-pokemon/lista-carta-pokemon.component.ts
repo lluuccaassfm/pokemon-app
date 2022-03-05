@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CartaPokemonService} from "../../services/carta-pokemon.service";
+import { CartaPokemonService } from "../../services/carta-pokemon.service";
 import { QueryParams } from "../../shared/models/query-params.model";
 import { Card } from "../../shared/models/card.model";
 

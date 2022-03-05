@@ -1,0 +1,17 @@
+@import "src/variables";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .owl-theme .owl-nav .owl-prev {
+  background-color: $secondary-color;
+  width: 50px;
+}
+
+::ng-deep .owl-theme .owl-nav .owl-next {
+  background-color: $secondary-color;
+  width: 50px;
+}

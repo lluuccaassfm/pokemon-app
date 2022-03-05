@@ -16,7 +16,7 @@ export class CarouselHolderComponent implements OnInit {
     pullDrag: false,
     dots: false,
     navSpeed: 700,
-    navText: [ 'prev', 'next' ],
+    navText: [ 'Prev', 'Next' ],
     responsive: {
       0: {
         items: 1

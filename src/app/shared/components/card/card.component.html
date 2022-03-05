@@ -1,0 +1,18 @@
+<div class="card-container" *ngIf="title">
+  <img *ngIf="imageUrl" [src]="imageUrl" alt="Imagem do pokemon">
+
+  <div class="container">
+    <span class="title">{{ title }}</span>
+    <span class="sub-title">{{ subTitle }}</span>
+
+    <span *ngFor="let type of types" class="types">
+      {{ type }}
+    </span>
+  </div>
+
+  <div class="footer">
+    <button>
+      Ver detalhes
+    </button>
+  </div>
+</div>
