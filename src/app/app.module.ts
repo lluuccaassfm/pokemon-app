@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartaPokemonService } from "./services/carta-pokemon.service";
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { Interceptor } from "./shared/interceptors/interceptor";
 
 @NgModule({
   declarations: [ AppComponent ],
@@ -15,7 +16,8 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule
   ],
   providers: [
-    CartaPokemonService
+    CartaPokemonService,
+    { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
