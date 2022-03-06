@@ -1,4 +1,4 @@
-export interface Weakness {
+export interface TypeValue {
   type?: string;
   value?: string;
 }

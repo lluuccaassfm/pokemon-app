@@ -9,6 +9,7 @@
   background: $alternate-color;
   border-radius: 14px;
   box-shadow: 0 4px 4px $secondary-color;
+  color: $primary-color;
 }
 
 img {
@@ -52,5 +53,6 @@ img {
     border-radius: 4px;
     padding: 10px;
     font-weight: bold;
+    cursor: pointer;
   }
 }

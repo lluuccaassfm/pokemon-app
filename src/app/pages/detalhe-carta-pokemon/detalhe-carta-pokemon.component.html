@@ -1,1 +1,62 @@
-<p>detalhar-carta-pokemon works!</p>
+<div class="container" fxLayout="column" *ngIf="card">
+  <div class="header" fxLayout="column" fxLayoutAlign="start center">
+    <h1>{{ card?.name }}</h1>
+    <h2>{{ card?.id }}</h2>
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-xs="row wrap">
+    <img *ngIf="card?.images?.large" [src]="card?.images?.large" alt="Imagem do pokémon">
+
+    <div fxLayout="column" [ngClass.gt-xs]="'padding'" [ngClass.lt-sm]="'margin-top'">
+      <div fxLayout="column" class="container-2">
+        <span class="title">Tipos</span>
+        <ng-container *ngIf="card?.types; else noContent">
+          <span class="info" *ngFor="let type of card?.types">
+            {{ type }}
+          </span>
+        </ng-container>
+      </div>
+
+      <div fxLayout="column" class="container-2">
+        <span class="title">Resistências</span>
+        <ng-container *ngIf="card?.resistances; else noContent">
+          <span class="info" *ngFor="let resistence of card?.resistances">
+            {{ resistence?.type  + ' ' + resistence?.value}}
+          </span>
+        </ng-container>
+      </div>
+
+      <div fxLayout="column" class="container-2">
+        <span class="title">Fraquezas</span>
+        <ng-container *ngIf="card?.weaknesses; else noContent">
+          <span class="info" *ngFor="let weakness of card?.weaknesses">
+            {{ weakness?.type + ' ' + weakness?.value }}
+          </span>
+        </ng-container>
+      </div>
+
+      <div fxLayout="column" class="container-2">
+        <p class="title" fxLayout="row" fxLayoutAlign="start center">
+          <span style="margin-right: 5px">Ataques</span>
+          <button *ngIf="card?.attacks"
+                  mat-icon-button #tooltip="matTooltip"
+                  matTooltip="Clique no nome do ataque para mais informações"
+                  matTooltipPosition="above"
+                  (click)="tooltip.toggle()">
+            <mat-icon>info</mat-icon>
+          </button>
+        </p>
+        <ng-container *ngIf="card?.attacks; else noContent">
+          <span class="info" *ngFor="let attack of card?.attacks">
+            <label class="link">{{ attack?.name }}</label>
+          </span>
+        </ng-container>
+      </div>
+
+      <ng-template #noContent>
+        <span>Nenhum dado encontrado</span>
+      </ng-template>
+    </div>
+  </div>
+</div>
+

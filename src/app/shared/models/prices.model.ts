@@ -1,9 +1,10 @@
 import { Normal } from "./normal.model";
-import { ReverseHolofoil } from "./reverseHolofoil.model";
+import { Holofoil } from "./reverseHolofoil.model";
 
 export interface Prices {
   normal?: Normal;
-  reverseHolofoil?: ReverseHolofoil;
+  holofoil?: Holofoil;
+  reverseHolofoil?: Holofoil;
   averageSellPrice?: number;
   lowPrice?: number;
   trendPrice?: number;

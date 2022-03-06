@@ -1,4 +1,4 @@
-export interface ReverseHolofoil {
+export interface Holofoil {
   low?: number;
   mid?: number;
   high?: number;

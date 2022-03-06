@@ -1,0 +1,61 @@
+@import "src/variables";
+
+.container {
+  padding: 1rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+  border-bottom: solid 1.5px $alternate-color;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: $alternate-color;
+    margin-bottom: 0;
+  }
+}
+
+.container-2 {
+  margin-bottom: 1.5rem;
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: $primary-color-light;
+  }
+
+  .info {
+    font-size: 20px;
+    padding-left: 1rem;
+    margin-bottom: .5rem;
+
+    &::before {
+      content: '> ';
+    }
+
+
+
+    .link {
+      cursor: pointer;
+
+      &:hover {
+        color: $alternate-color;
+      }
+    }
+  }
+}
+
+.icon {
+  color: $alternate-color;
+  font-size: 20px;
+}
+
+.padding {
+  padding: 2rem;
+}
+
+.margin-top {
+  margin-top: 1rem;
+}

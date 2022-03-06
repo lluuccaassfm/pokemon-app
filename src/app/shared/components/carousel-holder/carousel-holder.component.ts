@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { OwlOptions } from "ngx-owl-carousel-o";
 import { Card } from "../../models/card.model";
+import { Router } from "@angular/router";
+import { Rotas } from "../../enums/rotas";
 
 @Component({
   selector: 'app-carousel-holder',
@@ -36,9 +38,19 @@ export class CarouselHolderComponent implements OnInit {
 
   @Input() cartas: Card[];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  detalharCarta(carta: Card) {
+    this.router.navigate([Rotas.DETALHE_CARTA], {
+      queryParams: {
+        id: carta.id
+      }
+    });
   }
 
 }

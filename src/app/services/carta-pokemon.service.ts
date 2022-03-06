@@ -21,7 +21,7 @@ export class CartaPokemonService {
     });
   }
 
-  public getCard(id: number): Observable<ResponseCardModel> {
+  public getCard(id: string): Observable<ResponseCardModel> {
     return this.http.get<ResponseCardModel>(`${this.getURLAPICard()}/${id}`);
   }
 

@@ -1,6 +1,6 @@
 import { Ability } from "./ability.model";
 import { Attack } from "./attack.model";
-import { Weakness } from "./weakness.model";
+import { TypeValue } from "./weakness.model";
 import { Legalities } from "./legalities";
 import { Images } from "./images";
 import { SetModel } from "./set.model";
@@ -13,13 +13,15 @@ export interface Card {
   name?: string;
   supertype?: string;
   subtypes?: string[];
+  level?: string;
   hp?: string;
   types?: string[];
   evolvesFrom?: string;
   abilities?: Ability[];
   attacks?: Attack[];
-  weaknesses?: Weakness[];
+  weaknesses?: TypeValue[];
   retreatCost?: string[];
+  resistances?: TypeValue[];
   convertedRetreatCost?: number;
   set?: SetModel;
   number?: string;

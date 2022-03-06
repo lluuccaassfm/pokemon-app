@@ -6,6 +6,7 @@
         [title]="carta?.name"
         [subTitle]="carta?.id"
         [types]="carta?.types"
+        (exibirDetalhesEvent)="detalharCarta(carta)"
       ></app-card-pokemon>
     </ng-template>
     <ng-template>
