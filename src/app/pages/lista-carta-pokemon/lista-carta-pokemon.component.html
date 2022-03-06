@@ -1,1 +1,29 @@
-<app-carousel-holder [cartas]="cartas"></app-carousel-holder>
+<div class="filter" fxLayout="row" style="width: 100%">
+  <div fxLayout="column" fxFlex.lt-sm="80" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+    <label class="label-input">Nome do Pokémon</label>
+    <input type="text" [(ngModel)]="nomeFiltro">
+  </div>
+
+  <div class="button-search">
+    <button mat-icon-button (click)="filtrarCartas()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+</div>
+
+<ng-container *ngIf="device.isMobile">
+  <app-carousel-holder [cartas]="cartas"></app-carousel-holder>
+</ng-container>
+
+<ng-container *ngIf="!device.isMobile">
+  <div fxLayout="row wrap" fxLayoutGap="10px grid">
+    <ng-container *ngFor="let carta of cartas">
+      <app-card-pokemon
+        [imageUrl]="carta?.images?.small"
+        [title]="carta?.name"
+        [subTitle]="carta?.id"
+        [types]="carta?.types"
+      ></app-card-pokemon>
+    </ng-container>
+  </div>
+</ng-container>

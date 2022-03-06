@@ -4,7 +4,11 @@ import { ListaCartaPokemonComponent } from './lista-carta-pokemon.component';
 import { ListaCartaPokemonRoutingModule } from "./lista-carta-pokemon-routing.module";
 import { CarouselHolderModule } from "../../shared/components/carousel-holder/carousel-holder.module";
 import { MatCardModule } from "@angular/material/card";
-import { CardModule } from "../../shared/components/card/card.module";
+import { CardPokemonModule } from "../../shared/components/card/card-pokemon.module";
+import { FlexModule } from "@angular/flex-layout";
+import { FormsModule } from "@angular/forms";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
 
 
 
@@ -12,12 +16,16 @@ import { CardModule } from "../../shared/components/card/card.module";
   declarations: [
     ListaCartaPokemonComponent
   ],
-    imports: [
-        CommonModule,
-        ListaCartaPokemonRoutingModule,
-        CarouselHolderModule,
-        MatCardModule,
-        CardModule,
-    ]
+  imports: [
+    CommonModule,
+    ListaCartaPokemonRoutingModule,
+    CarouselHolderModule,
+    MatCardModule,
+    CardPokemonModule,
+    FlexModule,
+    FormsModule,
+    MatIconModule,
+    MatButtonModule
+  ]
 })
 export class ListaCartaPokemonModule { }

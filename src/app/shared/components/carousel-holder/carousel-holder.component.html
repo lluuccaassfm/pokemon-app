@@ -1,12 +1,12 @@
 <owl-carousel-o [options]="customOptions" class="container">
   <ng-container *ngFor="let carta of cartas">
     <ng-template carouselSlide>
-      <app-card
+      <app-card-pokemon
         [imageUrl]="carta?.images?.small"
         [title]="carta?.name"
         [subTitle]="carta?.id"
         [types]="carta?.types"
-      ></app-card>
+      ></app-card-pokemon>
     </ng-template>
     <ng-template>
 

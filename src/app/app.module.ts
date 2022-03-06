@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartaPokemonService } from "./services/carta-pokemon.service";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { Interceptor } from "./shared/interceptors/interceptor";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [ AppComponent ],
@@ -13,7 +14,8 @@ import { Interceptor } from "./shared/interceptors/interceptor";
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [
     CartaPokemonService,

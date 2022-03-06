@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselHolderComponent } from './carousel-holder.component';
 import { CarouselModule } from "ngx-owl-carousel-o";
-import {CardModule} from "../card/card.module";
-import {MatCardModule} from "@angular/material/card";
+import { CardPokemonModule } from "../card/card-pokemon.module";
+import { MatCardModule } from "@angular/material/card";
 
 
 
@@ -17,8 +17,8 @@ import {MatCardModule} from "@angular/material/card";
   imports: [
     CommonModule,
     CarouselModule,
-    CardModule,
-    MatCardModule
+    CardPokemonModule,
+    MatCardModule,
   ]
 })
 export class CarouselHolderModule { }

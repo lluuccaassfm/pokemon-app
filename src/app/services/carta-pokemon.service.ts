@@ -33,6 +33,10 @@ export class CartaPokemonService {
       pageSize: params.pageSize
     });
 
+    if(params.name) {
+      queryParams = queryParams.append('q', `name:${params.name}*`);
+    }
+
     return queryParams;
   }
 
