@@ -29,6 +29,6 @@
   </div>
 </ng-container>
 
-<div class="spinner" fxLayoutAlign="center center">
-  <mat-spinner *ngIf="carregando"></mat-spinner>
+<div *ngIf="carregando" class="spinner" fxLayoutAlign="center center">
+  <mat-spinner></mat-spinner>
 </div>

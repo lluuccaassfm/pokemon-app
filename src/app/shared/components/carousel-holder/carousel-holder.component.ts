@@ -46,11 +46,7 @@ export class CarouselHolderComponent implements OnInit {
   }
 
   detalharCarta(carta: Card) {
-    this.router.navigate([Rotas.DETALHE_CARTA], {
-      queryParams: {
-        id: carta.id
-      }
-    });
+    this.router.navigate([Rotas.DETALHE_CARTA+`/${carta.id}`]);
   }
 
 }

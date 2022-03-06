@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetalheCartaPokemonComponent } from "./detalhe-carta-pokemon.component";
 
 const routes: Routes = [
-  { path: '', component: DetalheCartaPokemonComponent }
+  { path: ':id', component: DetalheCartaPokemonComponent }
 ];
 
 @NgModule({

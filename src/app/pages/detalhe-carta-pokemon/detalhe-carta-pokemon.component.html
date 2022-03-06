@@ -64,8 +64,8 @@
     </div>
   </div>
 
-  <div class="spinner" fxLayoutAlign="center center">
-    <mat-spinner *ngIf="carregando"></mat-spinner>
+  <div *ngIf="carregando" class="spinner" fxLayoutAlign="center center">
+    <mat-spinner></mat-spinner>
   </div>
 </div>
 

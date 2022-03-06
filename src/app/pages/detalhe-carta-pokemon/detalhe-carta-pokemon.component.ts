@@ -29,10 +29,9 @@ export class DetalheCartaPokemonComponent implements OnInit {
     private cartaPokemonService: CartaPokemonService,
     private dialog: MatDialog
   ) {
-      route.queryParams.subscribe( params => {
+      route.params.subscribe( params => {
         this.idCard = params['id'];
       })
-
   }
 
   ngOnInit(): void {
