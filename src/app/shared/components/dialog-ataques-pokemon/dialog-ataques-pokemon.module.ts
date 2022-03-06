@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DialogAtaquesPokemonComponent } from './dialog-ataques-pokemon.component';
+import { MatDialogModule } from "@angular/material/dialog";
 
 
 
@@ -9,7 +10,8 @@ import { DialogAtaquesPokemonComponent } from './dialog-ataques-pokemon.componen
     DialogAtaquesPokemonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatDialogModule
   ]
 })
 export class DialogAtaquesPokemonModule { }

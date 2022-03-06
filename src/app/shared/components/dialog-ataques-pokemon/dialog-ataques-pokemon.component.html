@@ -1,1 +1,17 @@
-<p>dialog-ataques-pokemon works!</p>
+<h1 mat-dialog-title class="title">{{ attack?.name }}</h1>
+
+<div mat-dialog-content class="content">
+  <div>
+    <span> <b>Custo de "mana" :</b> {{ attack?.convertedEnergyCost }}</span>
+  </div>
+  <div>
+    <span> <b>Dano :</b> {{ attack?.damage }}</span>
+  </div>
+  <div>
+    <span> <b>Descrição :</b> {{ attack?.text }}</span>
+  </div>
+</div>
+
+<div mat-dialog-actions class="footer">
+  <button (click)="dialogRef.close()">Fechar</button>
+</div>

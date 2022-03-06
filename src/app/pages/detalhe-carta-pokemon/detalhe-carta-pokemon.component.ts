@@ -3,6 +3,11 @@ import { Card } from "../../shared/models/card.model";
 import {ActivatedRoute} from "@angular/router";
 import {CartaPokemonService} from "../../services/carta-pokemon.service";
 import {Subscription} from "rxjs";
+import {MatDialog} from "@angular/material/dialog";
+import {Attack} from "../../shared/models/attack.model";
+import {
+  DialogAtaquesPokemonComponent
+} from "../../shared/components/dialog-ataques-pokemon/dialog-ataques-pokemon.component";
 
 @Component({
   selector: 'app-detalhe-carta-pokemon',
@@ -21,7 +26,8 @@ export class DetalheCartaPokemonComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private cartaPokemonService: CartaPokemonService
+    private cartaPokemonService: CartaPokemonService,
+    private dialog: MatDialog
   ) {
       route.queryParams.subscribe( params => {
         this.idCard = params['id'];
@@ -37,6 +43,12 @@ export class DetalheCartaPokemonComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subs.map(sub => sub.unsubscribe());
+  }
+
+  openDialogAttacks(attack: Attack) {
+    this.dialog.open(DialogAtaquesPokemonComponent, {
+      data: attack
+    })
   }
 
 }
