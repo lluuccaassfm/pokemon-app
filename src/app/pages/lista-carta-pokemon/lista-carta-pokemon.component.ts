@@ -5,6 +5,7 @@ import { Card } from "../../shared/models/card.model";
 import { MediaQueryService } from "../../services/media-query.service";
 import { Rotas } from "../../shared/enums/rotas";
 import { Router } from "@angular/router";
+import { take } from "rxjs/operators";
 
 @Component({
   selector: 'app-lista-carta-pokemon',
@@ -18,6 +19,8 @@ export class ListaCartaPokemonComponent implements OnInit {
   nomeFiltro: string;
 
   cartas: Card[];
+
+  carregando: boolean;
 
   constructor(
     private cartaPokemonService: CartaPokemonService,
@@ -35,8 +38,13 @@ export class ListaCartaPokemonComponent implements OnInit {
   }
 
   buscarCartas() {
-    this.cartaPokemonService.getCards(this.queryParams).subscribe( res => {
+    this.carregando = true;
+    this.cartaPokemonService.getCards(this.queryParams).pipe(take(1)).subscribe( res => {
       this.cartas = res.data;
+    }, () => {
+
+    }, () => {
+      this.carregando = false
     })
   }
 

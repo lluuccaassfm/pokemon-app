@@ -1,5 +1,9 @@
 @import "src/variables";
 
+::ng-deep .mat-dialog-container {
+  background-color: $primary-color-light;
+}
+
 .title {
   color: $primary-color;
   font-weight: bold;
@@ -10,8 +14,8 @@
 .content {
   margin-bottom: 1rem;
   font-size: 16px;
-  color: $primary-color-light;
-  font-weight: 500;
+  color: $alternate-color;
+  font-weight: 400;
 
   b {
     color: $primary-color;
@@ -24,12 +28,19 @@
   justify-content: center;
 
   button {
-    background: $secondary-color;
-    color: #FFF;
-    border: none;
+    background: $primary-color;
+    color: $alternate-color;
+    border: solid 1px $secondary-color;
     border-radius: 4px;
+    box-shadow: 0 0 0;
     padding: 10px;
     font-weight: bold;
     cursor: pointer;
+
+    &:focus {
+      border: solid 1px $secondary-color;
+      box-shadow: 0 0 0;
+      outline: 0;
+    }
   }
 }

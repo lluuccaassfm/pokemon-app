@@ -31,3 +31,11 @@
     color: $alternate-color;
   }
 }
+
+.spinner {
+  height: 100%;
+}
+
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: $primary-color-light;
+}

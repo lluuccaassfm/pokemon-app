@@ -8,6 +8,17 @@
   margin-bottom: 1rem;
   border-bottom: solid 1.5px $alternate-color;
 
+  .icon-home {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+
+    button {
+      background-color: $primary-color;
+      color: $neutral-color;
+    }
+  }
+
   h1 {
     font-size: 30px;
     font-weight: 500;
@@ -58,4 +69,12 @@
 
 .margin-top {
   margin-top: 1rem;
+}
+
+.spinner {
+  height: 100%;
+}
+
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: $primary-color-light;
 }

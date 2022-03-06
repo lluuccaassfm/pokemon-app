@@ -7,6 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 
 
@@ -14,15 +15,16 @@ import { MatDialogModule } from "@angular/material/dialog";
   declarations: [
     DetalheCartaPokemonComponent
   ],
-  imports: [
-    CommonModule,
-    DetalheCartaPokemonRoutingModule,
-    FlexModule,
-    ExtendedModule,
-    MatIconModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatDialogModule
-  ]
+    imports: [
+        CommonModule,
+        DetalheCartaPokemonRoutingModule,
+        FlexModule,
+        ExtendedModule,
+        MatIconModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatDialogModule,
+        MatProgressSpinnerModule
+    ]
 })
 export class DetalheCartaPokemonModule { }

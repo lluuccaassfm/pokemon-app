@@ -2,13 +2,13 @@
 
 <div mat-dialog-content class="content">
   <div>
-    <span> <b>Custo de "mana" :</b> {{ attack?.convertedEnergyCost }}</span>
+    <span> <b>Custo de "mana" :</b> {{ attack?.convertedEnergyCost ? attack?.convertedEnergyCost : 'sem custo' }}</span>
   </div>
   <div>
-    <span> <b>Dano :</b> {{ attack?.damage }}</span>
+    <span> <b>Dano :</b> {{ attack?.damage ? attack?.damage : 'sem dano' }}</span>
   </div>
   <div>
-    <span> <b>Descrição :</b> {{ attack?.text }}</span>
+    <span> <b>Descrição :</b> {{ attack?.text ? attack?.text : 'sem descrição' }}</span>
   </div>
 </div>
 
