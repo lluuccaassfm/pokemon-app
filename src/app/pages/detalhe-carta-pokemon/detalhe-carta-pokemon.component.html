@@ -53,7 +53,7 @@
         </p>
         <ng-container *ngIf="card?.attacks; else noContent">
           <span class="info" *ngFor="let attack of card?.attacks">
-            <label class="link" (click)="openDialogAttacks(attack)">{{ attack?.name }}</label>
+            <label id="link-attack" class="link" (click)="openDialogAttacks(attack)">{{ attack?.name }}</label>
           </span>
         </ng-container>
       </div>

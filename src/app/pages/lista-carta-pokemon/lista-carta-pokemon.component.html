@@ -1,11 +1,11 @@
 <div class="filter" fxLayout="row" style="width: 100%">
   <div fxLayout="column" fxFlex.lt-sm="80" fxFlex.gt-xs="50" fxFlex.gt-md="25">
     <label class="label-input">Nome do Pokémon</label>
-    <input type="text" [(ngModel)]="nomeFiltro">
+    <input id="input-filter" type="text" [(ngModel)]="nomeFiltro">
   </div>
 
   <div class="button-search">
-    <button mat-icon-button (click)="filtrarCartas()">
+    <button id="button-search" mat-icon-button (click)="filtrarCartas()">
       <mat-icon>search</mat-icon>
     </button>
   </div>
