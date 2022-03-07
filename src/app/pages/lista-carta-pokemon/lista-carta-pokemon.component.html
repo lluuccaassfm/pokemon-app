@@ -1,7 +1,11 @@
+<div fxLayout="row" fxLayoutAlign="center" id="title">
+  <h1>POKÉMON APP</h1>
+</div>
+
 <div class="filter" fxLayout="row" style="width: 100%">
   <div fxLayout="column" fxFlex.lt-sm="80" fxFlex.gt-xs="50" fxFlex.gt-md="25">
     <label class="label-input">Nome do Pokémon</label>
-    <input id="input-filter" type="text" [(ngModel)]="nomeFiltro">
+    <input id="input-filter" type="text" [(ngModel)]="nomeFiltro" (keyup)="verifyKeyUp($event)">
   </div>
 
   <div class="button-search">

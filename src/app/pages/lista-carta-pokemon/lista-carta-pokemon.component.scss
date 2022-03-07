@@ -1,5 +1,10 @@
 @import "src/variables";
 
+h1 {
+  color: $alternate-color;
+  font-weight: bold;
+}
+
 .filter {
   padding: 1rem;
 

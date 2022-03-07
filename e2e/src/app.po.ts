@@ -6,7 +6,7 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('app-root [id="title"]')).getText() as Promise<string>;
+    return element(by.css('app-lista-carta-pokemon [id="title"]')).getText() as Promise<string>;
   }
 
   getInputFilter() {

@@ -22,6 +22,8 @@ export class ListaCartaPokemonComponent implements OnInit {
 
   carregando: boolean;
 
+  KEY_ENTER = "ENTER";
+
   constructor(
     private cartaPokemonService: CartaPokemonService,
     public device: MediaQueryService,
@@ -30,6 +32,12 @@ export class ListaCartaPokemonComponent implements OnInit {
 
   ngOnInit(): void {
     this.buscarCartas();
+  }
+
+  verifyKeyUp(event: KeyboardEvent) {
+    if(event.key.toUpperCase() === this.KEY_ENTER) {
+      this.filtrarCartas();
+    }
   }
 
   filtrarCartas() {

@@ -10,7 +10,7 @@ describe('Pokemon App', () => {
 
   it('should display title message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Pokémon App');
+    expect(page.getTitleText()).toEqual('POKÉMON APP');
   });
 
   it('should display input filter', () => {

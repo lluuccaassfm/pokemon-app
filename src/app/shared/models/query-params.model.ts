@@ -7,7 +7,7 @@ export interface QueryParamsModel {
 
 export class QueryParams implements QueryParamsModel{
   page = 1;
-  pageSize = 20;
+  pageSize = 50;
   orderBy = 'name';
   name: string;
 }
