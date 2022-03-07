@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListaCartaPokemonComponent } from './lista-carta-pokemon.component';
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('ListaCartaPokemonComponent', () => {
   let component: ListaCartaPokemonComponent;
@@ -8,7 +10,8 @@ describe('ListaCartaPokemonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListaCartaPokemonComponent ]
+      declarations: [ ListaCartaPokemonComponent ],
+      imports: [ HttpClientTestingModule, RouterTestingModule ]
     })
     .compileComponents();
   });

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarouselHolderComponent } from './carousel-holder.component';
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('CarouselHolderComponent', () => {
   let component: CarouselHolderComponent;
@@ -8,7 +9,8 @@ describe('CarouselHolderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CarouselHolderComponent ]
+      declarations: [ CarouselHolderComponent ],
+      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   });

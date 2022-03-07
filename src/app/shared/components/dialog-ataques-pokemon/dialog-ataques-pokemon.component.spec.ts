@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DialogAtaquesPokemonComponent } from './dialog-ataques-pokemon.component';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 describe('DialogAtaquesPokemonComponent', () => {
   let component: DialogAtaquesPokemonComponent;
@@ -8,9 +9,18 @@ describe('DialogAtaquesPokemonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogAtaquesPokemonComponent ]
+      declarations: [ DialogAtaquesPokemonComponent ],
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: []
+        },
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: []
+        }]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
